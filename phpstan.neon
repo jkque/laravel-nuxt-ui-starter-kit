@@ -1,0 +1,22 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - vendor/nesbot/carbon/extension.neon
+    - phar://phpstan.phar/conf/bleedingEdge.neon
+
+parameters:
+
+    paths:
+        - app
+        - bootstrap/app.php
+        - config
+        - database
+        - public
+        - routes
+
+
+    level: 5
+
+    tmpDir: /tmp/phpstan
+
+    universalObjectCratesClasses:
+        - Illuminate\Http\Resources\Json\JsonResource
