@@ -1,6 +1,137 @@
-# Laravel Vue Starter Kit
+# Laravel Nuxt UI Starter Kit
 
-A modern Laravel 12 application with Vue 3, Inertia.js, and Tailwind CSS v4.
+A production-ready Laravel 12 starter kit with Vue 3, Inertia.js v2, Nuxt UI components, and Tailwind CSS v4. Built for developers who want to start their next web application with modern tools and best practices already configured.
+
+## Why Use This Starter Kit?
+
+Skip the repetitive setup and start building features immediately. This starter kit provides:
+
+- **Zero Configuration**: Everything is pre-configured and ready to use
+- **Best Practices**: Modern architecture patterns and coding standards built-in
+- **Full Authentication**: Complete auth system you can customize or use as-is
+- **Beautiful UI**: Nuxt UI component library with Tailwind CSS v4
+- **Type Safety**: TypeScript on frontend, PHP 8.2+ with strict types on backend
+- **Developer Tools**: Testing, linting, formatting, and quality checks ready to go
+- **Example Code**: Reference implementations for common patterns
+
+Perfect for MVPs, SaaS applications, internal tools, or any Laravel project needing a modern frontend.
+
+## Installation
+
+### Via Laravel Installer
+
+You may create a new project using the [Laravel installer](https://laravel.com/docs/12.x/installation#creating-a-laravel-project):
+
+```bash
+laravel new my-app --kit=jkque/laravel-nuxt-ui-starter-kit
+```
+
+### Via Composer
+
+Or, you can create a new project using Composer's `create-project` command:
+
+```bash
+composer create-project jkque/laravel-nuxt-ui-starter-kit my-app
+```
+
+After creating the project, start the development server:
+
+```bash
+cd my-app
+composer run dev
+```
+
+This will:
+- Install all PHP and JavaScript dependencies
+- Set up your environment configuration
+- Run database migrations
+- Build frontend assets
+- Start Laravel server, queue worker, logs viewer, and Vite dev server
+
+Your application will be available at `http://localhost:8000`.
+
+### Alternative: Clone Repository
+
+You can also clone this repository directly:
+
+```bash
+git clone https://github.com/jkque/laravel-nuxt-ui-starter-kit.git my-app
+cd my-app
+composer setup
+composer run dev
+```
+
+## Quick Start
+
+Once installed, you can immediately:
+
+1. **Access your application** at `http://localhost:8000`
+2. **Register a new account** using the built-in authentication
+3. **Explore the dashboard** and sample pages
+4. **Review the code** in `resources/js/pages/` to see implementation examples
+5. **Start building** your features using the included components and patterns
+
+The starter kit includes:
+- Pre-built authentication pages (login, register, password reset, 2FA)
+- Dashboard with example layouts and components
+- Settings pages demonstrating forms and user preferences
+- Type-safe routing with Laravel Wayfinder
+- Configured testing environment with Pest
+
+## What's Included
+
+This starter kit comes with everything you need to build modern web applications:
+
+### Authentication & Authorization
+- Complete authentication system powered by Laravel Fortify
+- Login, registration, and email verification
+- Password reset functionality
+- Two-factor authentication support
+- Email verification
+- Password confirmation for sensitive actions
+
+### Frontend Stack
+- **Vue 3** with TypeScript support
+- **Inertia.js v2** for seamless SPA experience without API complexity
+- **Nuxt UI** component library for beautiful, accessible UI components
+- **Tailwind CSS v4** for utility-first styling
+- **Lucide Vue** icons
+- **Vite** for lightning-fast development and optimized production builds
+- Server-Side Rendering (SSR) support with Inertia
+
+### Sample Application Pages
+- Welcome/landing page
+- Dashboard with example UI
+- Customer management page
+- Inbox interface
+- Settings pages (Profile, Security, Notifications, Members)
+- Complete authentication flow pages
+
+### Backend Features
+- **Laravel 12** with modern PHP 8.2+ features
+- **Laravel Wayfinder** for type-safe routing between Laravel and Vue
+- **Laravel Horizon** for queue monitoring and management
+- **Database queue driver** configured by default
+- SQLite database (easily switchable to MySQL/PostgreSQL)
+- Session and cache management
+
+### Developer Experience
+- **Pest PHP** testing framework with 100% coverage requirements
+- **PHPStan** for static analysis
+- **Laravel Pint** for PHP code formatting
+- **Rector** for automated refactoring
+- **ESLint** and **Prettier** for JavaScript/Vue formatting
+- Type coverage analysis
+- Concurrent development server (Laravel + Queue + Logs + Vite)
+- **Laravel Pail** for beautiful log viewing
+- **Laravel Sail** Docker environment included
+
+### Code Quality Tools
+- Automated code formatting and linting
+- 100% test coverage enforcement
+- 100% type coverage requirements
+- Pre-configured testing scripts
+- Parallel test execution
 
 ## Requirements
 
@@ -9,27 +140,11 @@ A modern Laravel 12 application with Vue 3, Inertia.js, and Tailwind CSS v4.
 - Node.js & npm
 - SQLite (default) or MySQL/PostgreSQL
 
-## Quick Setup
-
-The fastest way to get started:
-
-```bash
-composer setup
-```
-
-This command will:
-- Install PHP dependencies
-- Create `.env` file from `.env.example`
-- Generate application key
-- Run database migrations
-- Install JavaScript dependencies
-- Build frontend assets
-
 ## Manual Setup
 
-If you prefer to set up step by step:
+If you cloned the repository directly and need to set up manually, or want to customize the installation process:
 
-### 1. Install Dependencies
+#### 1. Install Dependencies
 
 ```bash
 # Install PHP dependencies
@@ -39,7 +154,7 @@ composer install
 npm install
 ```
 
-### 2. Environment Configuration
+#### 2. Environment Configuration
 
 ```bash
 # Copy environment file
@@ -49,7 +164,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-### 3. Database Setup
+#### 3. Database Setup
 
 By default, this project uses SQLite. The database file will be created automatically during migration.
 
@@ -70,13 +185,37 @@ Run migrations:
 php artisan migrate
 ```
 
-### 4. Build Frontend Assets
+#### 4. Build Frontend Assets
 
 ```bash
 npm run build
 ```
 
+### What's Next?
+
+After installation, you can:
+
+1. **Start Development**: Run `composer run dev` to start all development services
+2. **Explore Sample Pages**: Visit the dashboard, settings, and other pre-built pages
+3. **Customize Authentication**: Modify the authentication pages and flow to match your needs
+4. **Build Your Features**: Use the included components and patterns as a starting point
+5. **Add Your Routes**: Define new routes in `routes/web.php` and create corresponding Inertia pages
+6. **Customize UI**: Leverage Nuxt UI components and Tailwind CSS for your design
+
+The starter kit includes example pages demonstrating common patterns like forms, tables, navigation, and layouts. Use these as references while building your application.
+
 ## Development
+
+### Using This Starter Kit
+
+This starter kit is structured to help you build applications quickly:
+
+- **Pages**: Create new Inertia pages in `resources/js/pages/`
+- **Components**: Reusable Vue components in `resources/js/components/`
+- **Layouts**: Page layouts in `resources/js/layouts/`
+- **Routes**: Define routes in `routes/web.php` using Laravel Wayfinder for type-safety
+- **Actions**: Backend actions in `resources/js/actions/`
+- **Composables**: Reusable composition functions in `resources/js/composables/`
 
 ### Start Development Server
 
