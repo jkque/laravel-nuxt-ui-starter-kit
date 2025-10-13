@@ -2,10 +2,17 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "jkque/laravel-nuxt-ui-starter-kit",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "A production-ready Laravel 12 starter kit with Vue 3, Inertia.js v2, Nuxt UI components, and Tailwind CSS v4. Complete authentication, beautiful UI components, and modern developer tools included.",
     "keywords": [
         "laravel",
-        "framework"
+        "starter-kit",
+        "vue",
+        "inertia",
+        "nuxt-ui",
+        "tailwind",
+        "typescript",
+        "laravel-starter",
+        "boilerplate"
     ],
     "license": "MIT",
     "require": {
@@ -57,7 +64,9 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-            "@php artisan migrate --graceful --ansi"
+            "@php artisan migrate --graceful --ansi",
+            "npm install",
+            "npm run build"
         ],
         "update:requirements": [
             "composer bump",
