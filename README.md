@@ -23,7 +23,7 @@ Perfect for MVPs, SaaS applications, internal tools, or any Laravel project need
 You may create a new project using the [Laravel installer](https://laravel.com/docs/12.x/installation#creating-a-laravel-project):
 
 ```bash
-laravel new my-app --kit=jkque/laravel-nuxt-ui-starter-kit
+laravel new my-app --using=jkque/laravel-nuxt-ui-starter-kit
 ```
 
 ### Via Composer
